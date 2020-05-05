@@ -1,4 +1,4 @@
-package com.homeDeposit.homeDeposit.Entity;
+package com.homeDeposit.homeDeposit.Entity.enums;
 
 import lombok.Getter;
 

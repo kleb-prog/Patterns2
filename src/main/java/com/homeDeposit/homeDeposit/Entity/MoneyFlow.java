@@ -1,5 +1,6 @@
 package com.homeDeposit.homeDeposit.Entity;
 
+import com.homeDeposit.homeDeposit.Entity.enums.MoneyFlowType;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

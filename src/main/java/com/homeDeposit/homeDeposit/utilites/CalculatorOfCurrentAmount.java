@@ -1,12 +1,11 @@
 package com.homeDeposit.homeDeposit.utilites;
 
 import com.homeDeposit.homeDeposit.Entity.MoneyFlow;
-import com.homeDeposit.homeDeposit.Entity.MoneyFlowType;
 
 import java.util.List;
 
-import static com.homeDeposit.homeDeposit.Entity.MoneyFlowType.IncomeType;
-import static com.homeDeposit.homeDeposit.Entity.MoneyFlowType.SpendingType;
+import static com.homeDeposit.homeDeposit.Entity.enums.MoneyFlowType.IncomeType;
+import static com.homeDeposit.homeDeposit.Entity.enums.MoneyFlowType.SpendingType;
 
 public class CalculatorOfCurrentAmount {
     public static double calculate(List<MoneyFlow> moneyFlowList) {

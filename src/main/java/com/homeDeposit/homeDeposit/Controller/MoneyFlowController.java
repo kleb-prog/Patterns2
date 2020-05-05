@@ -2,7 +2,7 @@ package com.homeDeposit.homeDeposit.Controller;
 
 import com.homeDeposit.homeDeposit.DAO.MoneyFlowDao;
 import com.homeDeposit.homeDeposit.Entity.MoneyFlow;
-import com.homeDeposit.homeDeposit.Entity.MoneyFlowType;
+import com.homeDeposit.homeDeposit.Entity.enums.MoneyFlowType;
 import com.homeDeposit.homeDeposit.Service.MoneyFlowService;
 import com.homeDeposit.homeDeposit.utilites.CalculatorOfCurrentAmount;
 import lombok.RequiredArgsConstructor;
@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -49,7 +50,7 @@ public class MoneyFlowController {
     }
 
     @PostMapping
-    public String addOne(MoneyFlowDao moneyFlowDao) {
+    public String addOne(@Valid MoneyFlowDao moneyFlowDao) {
         MoneyFlow moneyFlow = MoneyFlow.builder()
                 .uuid(UUID.randomUUID())
                 .amount(moneyFlowDao.getAmount())

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.w3.org/1999/xhtml"
+      lang="EN">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Home Deposit</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+		<table class="table table-hover">
+            <thead>
+				<tr>
+                    <th>#</th>
+                    <th>Сумма</th>
+                    <th>Описание</th>
+                    <th>Дата</th>
+                    <th>Тип</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="moneyFlow : ${moneyFlows}">
+                <!--/*@thymesVar id="product" type="ru.geekbrains.supershop.persistence.entities.Product"*/-->
+                <td th:text="${moneyFlow.uuid}"></td>
+                <td th:text="${moneyFlow.amount}"></td>
+                <td th:text="${moneyFlow.description}"></td>
+                <td th:text="${moneyFlow.date}"></td>
+                <td th:text="${moneyFlow.date}"></td>
+            </tr>
+            </tbody>
+        </table>
+		<hr>
+		
+		<div>
+			<a> Текушая сумма: </a>
+			<span>[[ ${currentAmount}]]</span>
+		</div>
+    </body>
+</html>

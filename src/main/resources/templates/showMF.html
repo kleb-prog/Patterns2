@@ -25,7 +25,7 @@
                 <td th:text="${moneyFlow.amount}"></td>
                 <td th:text="${moneyFlow.description}"></td>
                 <td th:text="${moneyFlow.date}"></td>
-                <td th:text="${moneyFlow.date}"></td>
+                <td th:text="${moneyFlow.type.name}"></td>
             </tr>
             </tbody>
         </table>
@@ -34,6 +34,8 @@
 		<div>
 			<a> Текушая сумма: </a>
 			<span>[[ ${currentAmount}]]</span>
+			<hr>
+			<a class="btn btn-primary" href="http://localhost:8080/money/addForm" role="button">Добавить Money Flow</a>
 		</div>
     </body>
 </html>
